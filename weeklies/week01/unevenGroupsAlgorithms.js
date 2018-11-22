@@ -1,9 +1,4 @@
 /**
- * Exercises 4.2 - #9
- * 
- */
-
-/**
  * Exercises 4.3
  * Create Three Different Algorithms to Solve this Problem. Given two
  * positive numbers A and B, where A is greater than B, nd a way to break up A

@@ -16,5 +16,10 @@ function flooredSquareRoot(number) {
 }
 
 // put user input here
-let root = flooredSquareRoot(141);
-console.log(root);
+console.log(`141 should be 11: ${flooredSquareRoot(141)}`);
+console.log(`111 should be 10: ${flooredSquareRoot(111)}`);
+console.log(`15 should be 3: ${flooredSquareRoot(15)}`);
+console.log(`19 should be 4: ${flooredSquareRoot(19)}`);
+console.log(`54 should be 7: ${flooredSquareRoot(54)}`);
+console.log(`254 should be 15: ${flooredSquareRoot(254)}`);
+console.log(`369 should be 19: ${flooredSquareRoot(369)}`);

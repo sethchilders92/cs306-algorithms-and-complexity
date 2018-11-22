@@ -1,0 +1,162 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Short Sectioned Assignment
+% LaTeX Template
+% Version 1.0 (5/5/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Frits Wenneker (http://www.howtotex.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[paper=a4, fontsize=11pt]{scrartcl} % A4 paper and 11pt font size
+\usepackage[T1]{fontenc}
+\usepackage{fourier}
+\usepackage[english]{babel}
+\usepackage{amsmath,amsfonts,amsthm}
+
+\usepackage{lipsum}
+
+\usepackage{sectsty}
+\allsectionsfont{\centering \normalfont\scshape}
+
+\usepackage{fancyhdr}
+\pagestyle{fancyplain}
+\fancyhead{}
+\fancyfoot[L]{} % Empty left footer
+\fancyfoot[C]{} % Empty center footer
+\fancyfoot[R]{\thepage} % Page numbering for right footer
+\renewcommand{\headrulewidth}{0pt} % Remove header underlines
+\renewcommand{\footrulewidth}{0pt} % Remove footer underlines
+\setlength{\headheight}{13.6pt} % Customize the height of the header
+
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+
+\setlength\parindent{0pt}
+
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=5mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}} % Create horizontal rule command with 1 argument of height
+
+\title{	
+\normalfont \normalsize 
+\horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
+\huge Week 03 \\ % The assignment title
+\horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
+}
+
+\author{Seth Childers} % Your name
+
+\date{} % Today's date or a custom date
+
+\begin{document}
+
+\maketitle % Print the title
+
+%----------------------------------------------------------------------------------------
+%	PROBLEM 1
+%----------------------------------------------------------------------------------------
+
+\section{4-1 Exercise 07}
+
+\textbf{Problem:} Apply insertion sort to sort the list E, X, A, M, P, L, E in alphabetical order.
+
+\bigskip
+\textbf{Code written in Python}
+\begin{lstlisting}
+############################################################
+# Exerccise 4.1 - #07
+# Apply insertion sort to sort the list E, X, A, M, P, L, E
+# in alphabetical order.
+#
+# Reference: https://www.geeksforgeeks.org/insertion-sort/
+############################################################
+def insertionSort(letters):
+    for i in range(1, len(letters)):        # keep track of the index
+        key = letters[i]                        # assign current letter to key
+        j = i-1                                 # j is the last letter looked at
+        while j >= 0 and key < letters[j]:      # while current letter < last letter
+            letters[j+1] = letters[j]               # assign the next spot to the last letter
+            j -= 1                                  # decrement j    
+        letters[j+1] = key                      # assign the next value in letters to the current value
+    print(letters)
+
+insertionSort(['E', 'X', 'A', 'M', 'P', 'L', 'E'])
+\end{lstlisting}
+\pagebreak
+
+%----------------------------------------------------------------------------------------
+%	PROBLEM 2
+%----------------------------------------------------------------------------------------
+
+\section{4-2 Exercise 01}
+
+\textbf{Problem:} Apply the DFS-based algorithm to solve the topological sorting problem for the following digraphs.
+
+\textbf{Results}
+
+\includegraphics[width=15cm, height=10cm]{./UNADJUSTEDNONRAW_thumb_eaf}
+\includegraphics[width=15cm, height=10cm]{./UNADJUSTEDNONRAW_thumb_eba}
+\includegraphics[width=15cm, height=10cm]{./UNADJUSTEDNONRAW_thumb_ebb}
+
+\pagebreak
+
+%----------------------------------------------------------------------------------------
+%	PROBLEM 2
+%----------------------------------------------------------------------------------------
+
+\section{4-3 Exercise 02}
+
+\textbf{Problem:} Generate all permutations of {1, 2, 3, 4} by:
+
+\textit{a.} The bottom-up minimal-change algorithm
+
+\textit{b.} The Johnson-Trotter algorithm
+
+\textit{c.} The lexicographic-order algorithm \\
+
+\textbf{Results}
+
+\includegraphics[width=15cm, height=10cm]{./UNADJUSTEDNONRAW_thumb_ec0}
+\includegraphics[width=15cm, height=10cm]{./UNADJUSTEDNONRAW_thumb_ebf}
+\includegraphics[width=15cm, height=10cm]{./UNADJUSTEDNONRAW_thumb_ec1}
+
+\pagebreak
+
+%----------------------------------------------------------------------------------------
+\end{document}

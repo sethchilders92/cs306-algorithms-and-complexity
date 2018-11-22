@@ -48,12 +48,8 @@ function calculateRoot(a, b, c, discriminant) {
     }
 }
 
-function main() {
+function main(a, b, c) {
     // put user input here
-    let a = 9;
-    let b = 12;
-    let c = 4;
-    
     let discriminant = findDiscriminant(a, b, c);
     let roots = calculateRoot(a, b, c, discriminant);
     
@@ -61,4 +57,6 @@ function main() {
     return;
 }
 
-main();
+main(9, 12, 4);
+main(8, 10, 3);
+main(15, 2, 1);

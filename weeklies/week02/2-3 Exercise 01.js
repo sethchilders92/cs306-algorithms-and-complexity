@@ -37,7 +37,6 @@ function c(max) {
     return val;
 }
 
-
 console.log(`a. 1 + 3 + 5 + 7 + ... + 999 = ${a(1, 999)}`);
 console.log(`b. 2 + 4 + 8 + 16 + ... + 1024 = ${b(2, 1024)}`);
 console.log(`c. Summation (n + 1, i=3, 1) = ${c(8)}`);

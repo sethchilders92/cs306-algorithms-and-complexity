@@ -1,4 +1,6 @@
 ########################################################################
+# Exercises 3.5 - #04
+#
 # Traverse the graph of Problem 1 by breadth-first search and construct
 # the corresponding breadth-first search tree. Start the traversal at 
 # vertex 'a' and resolve ties by the vertex alphabetical order.
@@ -28,7 +30,7 @@ def drawGraph(graph):
     # draw the graph
     nx.draw(graph, with_labels=True)
     # show the graph
-    plt.pyplot.savefig('./img/3-5_graph.png')
+    plt.pyplot.savefig('3-5_graph.png')
 
 def createGraph():
     G = nx.Graph()
